@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Text: UILabel!
     @IBOutlet weak var Stop: UIButton!
     
+    
     override func viewDidLoad() {
 
         
@@ -37,9 +38,9 @@ class ViewController: UIViewController {
         Record.enabled = false
     }
     
-    @IBAction func StopBtn(sender: UIButton) {
-        print("this is a print test for stop btn")
+    @IBAction func Stopbtn(sender: UIButton) {
     }
+
 
 }
 
