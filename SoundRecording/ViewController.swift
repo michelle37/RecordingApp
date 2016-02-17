@@ -15,9 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var Stop: UIButton!
     
     override func viewDidLoad() {
+
+        
+    }
+   override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
         Text.hidden = true
-        
+        Stop.hidden = true
+        Record.enabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,9 +33,12 @@ class ViewController: UIViewController {
     @IBAction func RecordingBtn(sender: UIButton) {
         print("this is a print test")
         Text.hidden = false
+        Stop.hidden = false
+        Record.enabled = false
     }
     
     @IBAction func StopBtn(sender: UIButton) {
+        print("this is a print test for stop btn")
     }
 
 }
