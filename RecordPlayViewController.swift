@@ -12,6 +12,7 @@ import AVFoundation
 class RecordPlayViewController: UIViewController {
 
     var audioPlay : AVAudioPlayer!
+    var receivedAudio:RecordedAudio!
     
     @IBOutlet weak var slow: UIButton!
     @IBOutlet weak var fast: UIButton!
@@ -20,17 +21,18 @@ class RecordPlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setup the filepath for the audio file
-        if let filePath = NSBundle.mainBundle().pathForResource("ego", ofType: "mp3"){
-            //convert filepath from string to URL
-            let filePathURL = NSURL.fileURLWithPath(filePath)
-            //create an instance of AVAudioPlay
-            audioPlay = try? AVAudioPlayer(contentsOfURL: filePathURL)
-            audioPlay.enableRate = true
-            
-        }
-        else{
-            print("Something went wrong")
-        }
+//        if let filePath = NSBundle.mainBundle().pathForResource("ego", ofType: "mp3"){
+//            //convert filepath from string to URL
+//            let filePathURL = NSURL.fileURLWithPath(filePath)
+//            //create an instance of AVAudioPlay
+//            
+//            
+//        }
+//        else{
+//            print("Something went wrong")
+//        }
+        audioPlay = try? AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+        audioPlay.enableRate = true
         
     }
 
