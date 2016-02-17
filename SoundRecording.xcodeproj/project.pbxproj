@@ -15,6 +15,7 @@
 		6EC00BFA1C73C8C200924C14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC00BF81C73C8C200924C14 /* LaunchScreen.storyboard */; };
 		6EC00C051C73C8C200924C14 /* SoundRecordingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC00C041C73C8C200924C14 /* SoundRecordingTests.swift */; };
 		6EC00C101C73C8C200924C14 /* SoundRecordingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC00C0F1C73C8C200924C14 /* SoundRecordingUITests.swift */; };
+		6EC00C1E1C73C9FD00924C14 /* ego.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EC00C1D1C73C9FD00924C14 /* ego.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6EC00C0B1C73C8C200924C14 /* SoundRecordingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundRecordingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC00C0F1C73C8C200924C14 /* SoundRecordingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecordingUITests.swift; sourceTree = "<group>"; };
 		6EC00C111C73C8C200924C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC00C1D1C73C9FD00924C14 /* ego.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ego.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				6EC00BEE1C73C8C200924C14 /* ViewController.swift */,
 				6EC00BF01C73C8C200924C14 /* Main.storyboard */,
 				6EC00BF61C73C8C200924C14 /* Assets.xcassets */,
+				6EC00C1D1C73C9FD00924C14 /* ego.mp3 */,
 				6EC00BF81C73C8C200924C14 /* LaunchScreen.storyboard */,
 				6EC00BFB1C73C8C200924C14 /* Info.plist */,
 				6EC00BF31C73C8C200924C14 /* SoundRecording.xcdatamodeld */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC00C1E1C73C9FD00924C14 /* ego.mp3 in Resources */,
 				6EC00BFA1C73C8C200924C14 /* LaunchScreen.storyboard in Resources */,
 				6EC00BF71C73C8C200924C14 /* Assets.xcassets in Resources */,
 				6EC00BF21C73C8C200924C14 /* Main.storyboard in Resources */,
