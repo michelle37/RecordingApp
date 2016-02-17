@@ -111,12 +111,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="SlowSound"/>
                                 <variation key="widthClass=compact"/>
+                                <connections>
+                                    <action selector="SlowBtn:" destination="JFN-su-i99" eventType="touchUpInside" id="OBI-0A-fkn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGI-Uz-vvZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" image="FastSound"/>
                                 <variation key="widthClass=compact"/>
+                                <connections>
+                                    <action selector="Fastbtn:" destination="JFN-su-i99" eventType="touchUpInside" id="XVo-H9-t2e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYk-UB-fNe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="Stopbtn:" destination="JFN-su-i99" eventType="touchUpInside" id="g72-yU-dPS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,9 +137,11 @@
                             <constraint firstItem="QnF-HQ-ihk" firstAttribute="top" secondItem="9bZ-Xc-Cod" secondAttribute="bottom" constant="58" id="0nH-fh-lXm">
                                 <variation key="widthClass=compact" constant="67"/>
                             </constraint>
+                            <constraint firstItem="iYk-UB-fNe" firstAttribute="top" secondItem="9bZ-Xc-Cod" secondAttribute="bottom" constant="370" id="GJO-Xa-emh"/>
                             <constraint firstItem="FGI-Uz-vvZ" firstAttribute="top" secondItem="9bZ-Xc-Cod" secondAttribute="bottom" constant="58" id="Jlc-nR-eyt">
                                 <variation key="widthClass=compact" constant="67"/>
                             </constraint>
+                            <constraint firstItem="iYk-UB-fNe" firstAttribute="centerX" secondItem="SqE-9n-fnK" secondAttribute="centerX" id="PtC-qy-U1D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FGI-Uz-vvZ" secondAttribute="trailing" constant="25" id="diu-Ry-rac">
                                 <variation key="widthClass=compact" constant="15"/>
                             </constraint>
@@ -138,27 +153,38 @@
                             <mask key="subviews">
                                 <exclude reference="QnF-HQ-ihk"/>
                                 <exclude reference="FGI-Uz-vvZ"/>
+                                <exclude reference="iYk-UB-fNe"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0nH-fh-lXm"/>
                                 <exclude reference="dwM-qu-ShA"/>
                                 <exclude reference="Jlc-nR-eyt"/>
                                 <exclude reference="diu-Ry-rac"/>
+                                <exclude reference="GJO-Xa-emh"/>
+                                <exclude reference="PtC-qy-U1D"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="QnF-HQ-ihk"/>
                                 <include reference="FGI-Uz-vvZ"/>
+                                <include reference="iYk-UB-fNe"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0nH-fh-lXm"/>
                                 <include reference="dwM-qu-ShA"/>
                                 <include reference="Jlc-nR-eyt"/>
                                 <include reference="diu-Ry-rac"/>
+                                <include reference="GJO-Xa-emh"/>
+                                <include reference="PtC-qy-U1D"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="fast" destination="FGI-Uz-vvZ" id="J2a-NV-v60"/>
+                        <outlet property="slow" destination="QnF-HQ-ihk" id="yUO-br-nyk"/>
+                        <outlet property="stop" destination="iYk-UB-fNe" id="MqO-e8-4gi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cpu-WW-L0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

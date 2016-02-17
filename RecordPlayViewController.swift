@@ -7,29 +7,53 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RecordPlayViewController: UIViewController {
 
+    var audioPlay : AVAudioPlayer!
+    
+    @IBOutlet weak var slow: UIButton!
+    @IBOutlet weak var fast: UIButton!
+    @IBOutlet weak var stop: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //setup the filepath for the audio file
+        if let filePath = NSBundle.mainBundle().pathForResource("ego", ofType: "mp3"){
+            //convert filepath from string to URL
+            let filePathURL = NSURL.fileURLWithPath(filePath)
+            //create an instance of AVAudioPlay
+            audioPlay = try? AVAudioPlayer(contentsOfURL: filePathURL)
+            audioPlay.enableRate = true
+            
+        }
+        else{
+            print("Something went wrong")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func SlowBtn(sender: UIButton) {
+        audioPlay.rate = 0.5
+        audioPlay.currentTime = 0.0
+        audioPlay.play()
+        
     }
-    */
+    
+    @IBAction func Fastbtn(sender: UIButton) {
+        audioPlay.rate = 2.0
+        audioPlay.currentTime = 0.0
+        audioPlay.play()
+    }
+
+    @IBAction func Stopbtn(sender: UIButton) {
+        audioPlay.stop()
+    }
+
 
 }
