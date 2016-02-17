@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Text.hidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func RecordingBtn(sender: UIButton) {
+        print("this is a print test")
+        Text.hidden = false
     }
     
     @IBAction func StopBtn(sender: UIButton) {

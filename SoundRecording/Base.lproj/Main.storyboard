@@ -35,24 +35,23 @@
                                     <action selector="RecordingBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NYO-AK-sRE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0x-b8-bby">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0x-b8-bby">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <color key="textColor" red="0.21536402690000001" green="0.49317618730000001" blue="0.68893160990000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="156" y="264" width="88" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.727941744" green="1" blue="0.97291709439999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kKC-7q-rta" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="2gW-0Y-800"/>
                             <constraint firstItem="p14-w8-7de" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4fl-oO-DmO"/>
+                            <constraint firstItem="B0x-b8-bby" firstAttribute="top" secondItem="kKC-7q-rta" secondAttribute="bottom" constant="24" id="5bN-Mu-sQU"/>
                             <constraint firstItem="p14-w8-7de" firstAttribute="top" secondItem="kKC-7q-rta" secondAttribute="bottom" constant="239" id="gsH-ZU-d1c">
                                 <variation key="widthClass=compact" constant="229"/>
                             </constraint>
                             <constraint firstItem="kKC-7q-rta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lCI-oM-FQu"/>
+                            <constraint firstItem="B0x-b8-bby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nBp-0i-eS5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -63,6 +62,8 @@
                             <mask key="constraints">
                                 <exclude reference="2gW-0Y-800"/>
                                 <exclude reference="lCI-oM-FQu"/>
+                                <exclude reference="5bN-Mu-sQU"/>
+                                <exclude reference="nBp-0i-eS5"/>
                                 <exclude reference="4fl-oO-DmO"/>
                                 <exclude reference="gsH-ZU-d1c"/>
                             </mask>
@@ -76,6 +77,8 @@
                             <mask key="constraints">
                                 <include reference="2gW-0Y-800"/>
                                 <include reference="lCI-oM-FQu"/>
+                                <include reference="5bN-Mu-sQU"/>
+                                <include reference="nBp-0i-eS5"/>
                                 <include reference="4fl-oO-DmO"/>
                                 <include reference="gsH-ZU-d1c"/>
                             </mask>
